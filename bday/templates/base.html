@@ -1,0 +1,44 @@
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Elson Eguaosa">
+    <title>Happy Birthday Ayomikun</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3fbdea2acb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <style>
+        a:hover, a:focus{
+    	    color: #ff4b2b;
+    	}
+    	*{
+        font-family: 'Spectral', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+    <header>
+        <div class="container">
+            <div id="title">
+                <h1>Happy Birthday Ayomikun</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'new' %}">Wish</a></li>
+                    <li><a href="{% url 'give' %}">Give</a></li>
+                    <li><a href="{% url 'wish_list' %}">All Wishes</a></li>
+                    <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<body>
+    {% block content %} {% endblock %}
+</body>
+
+<footer class="center bg-red">
+    <p>Designed by Elson.</p>
+    <p>Happy Birthday Ayomikun &copy; 2020</p>
+</footer>
