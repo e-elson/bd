@@ -178,10 +178,11 @@ header nav{
 	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 	position: relative;
 	overflow: hidden;
-	width: 80%;
+	width: 70%;
 	min-height: 100px;
 	padding: 50px;
-	margin: 5%;
+	margin: 50px;
+
 }
 
 .detail-2 h1{
@@ -217,7 +218,7 @@ header nav{
 .alert {
   padding: 20px;
   border-radius: 10px;
-  background-color: green; /* Red */
+  background-color: green;
   color: white;
   margin-bottom: 15px;
 }
@@ -240,10 +241,18 @@ header nav{
 }
 
 footer{
-	padding: 2rem;
+	padding: 1rem;
 }
 
 @media(max-width: 560px){
+	.detail-2{
+		width: 70%;
+		margin-left: 7px;
+	}
+	.body-1{
+		margin-top: 70px;
+		margin-bottom: 50px;
+	}
 	.showcase::after{
 		height: 50hv;
 	}
@@ -266,6 +275,9 @@ footer{
 	}
 	.grid-4,.grid-2 {
 		grid-template-columns: 1fr;
+	}
+	.footer{
+		width: 100%;
 	}
 	.items div {
 		border-bottom: #333 dashed 1px;

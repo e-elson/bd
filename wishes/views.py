@@ -11,10 +11,8 @@ from django.contrib.auth.decorators import login_required
 
 def index(request):
     wishes = Wish.objects.all()
-    image = Image.objects.get(pk=2)
     context = {
         'wishes': wishes,
-        'image': image,
     }
     return render(request, 'index.html', context)
 
@@ -105,8 +103,4 @@ def gallery(request):
     return render(request, 'gallery.html', context)
 
 def give(request):
-    img = Image.objects.get(pk=1)
-    context = {
-        'img': img,
-    }
-    return render(request, 'give.html', context)
+    return render(request, 'give.html',)

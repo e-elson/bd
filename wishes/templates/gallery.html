@@ -25,37 +25,47 @@
     padding-bottom: 25px;
     }
     @media(max-width: 560px){
-    .row{
-    padding: 30px;
-    margin-top: 70px;
-    }
-    header .container{
+    header #title,
+	header nav,
+	header nav li{
+		float: none;
+		text-align: center;
+		width: 100%;
+	}
+	header{
+		padding-bottom: 20px;
+	}
+
+	header .container{
 		position: fixed;
 		width: 100%;
 		top: 0;
 		background-color: #333;
 		z-index: 10000;
-		padding-bottom: 10px;
+		padding-bottom: 16px;
 		border-bottom: 3px #ff4b2b solid;
-		padding-top: 30px;
 	}
-	.container #title h1{
-    padding-bottom: 25px;
+	.detail{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 200px;
     }
     }
 </style>
-<h1></h1>
-<div class="row">
-    {% for image in images %}
-    <div class="col-md-4">
-        <div class="card mb-2">
-            <img src="{% static image.image %}" class="card-img-top">
-            <div class="card-body">
-                <h6 class="card-text">{{ image.desc }}</h6>
+<div class="detail"
+    <div class="row">
+        {% for image in images %}
+        <div class="col-md-4">
+            <div class="card mb-2">
+                <img src="{% static image.image %}" class="card-img-top">
+                <div class="card-body" style="background:#ff4b2b; color:white;">
+                    <h6 class="card-text" style="background:#ff4b2b; color:white;">{{ image.desc }}</h6>
+                </div>
             </div>
         </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
 
 {% endblock %}

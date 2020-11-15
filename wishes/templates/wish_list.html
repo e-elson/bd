@@ -4,6 +4,7 @@
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous">
 <style>
+
     a:hover{
     text-decoration:none;
     color: #ff4b2b;
@@ -11,13 +12,49 @@
     #listbtn:hover{
     color: #333;
     }
-    .container #title h1{
-    padding-bottom: 25px;
+    .row{
+    padding-top: 70px;
+    }
+    .detail{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 100px;
+    }
+
+    @media(max-width: 560px){
+    header #title,
+	header nav,
+	header nav li{
+		float: none;
+		text-align: center;
+		width: 100%;
+	}
+	header{
+		padding-bottom: 20px;
+	}
+
+	header .container{
+		position: fixed;
+		width: 100%;
+		top: 0;
+		background-color: #333;
+		z-index: 10000;
+		padding-bottom: 16px;
+		border-bottom: 3px #ff4b2b solid;
+	}
+	.detail{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 200px;
+    }
     }
 </style>
-<h1>WISH LIST</h1>
-<div class="row">
-{% for wish in wishes %}
+<div class="detail">
+    <h1>WISH LIST</h1>
+    <div class="row">
+        {% for wish in wishes %}
         <div class="col-md-4">
             <div class="card mb-2">
                 <div class="card-body">
@@ -27,6 +64,7 @@
                 </div>
             </div>
         </div>
-    {% endfor %}
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}
